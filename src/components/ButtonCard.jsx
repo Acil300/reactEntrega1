@@ -1,18 +1,18 @@
 import React from 'react'
 
-const ButtonCard = ({letterStyle, quotesStyle,clickStyle}) => {
+const ButtonCard = ({changeAll, changeColor}) => {
 
   const styleButton ={
-    color: letterStyle
+    color: changeColor
   }
 
   return (
     <div>
-      <button onClick={clickStyle}>
+      <button onClick={changeAll} >
         <i className="fa-solid fa-arrow-right" style={styleButton}></i>
       </button>
     </div>
-  )
+  );
 }
 
 export default ButtonCard

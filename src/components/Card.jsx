@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import quotes from '../quotes.json'
+import ButtonCard from './ButtonCard'
 
 
 
@@ -41,9 +42,13 @@ const Card = () => {
         <i className="fas fa-quote-left"></i> {quote.quote}
       </h3>
       <h4>{quote.author}</h4>
-      <button onClick={changeQuote} style={{color: color }}>
+      <ButtonCard
+      changeAll={changeQuote}
+      changeColor={color}
+      />
+      {/* <button onClick={changeQuote} style={{color: color }}>
         <i className = "fas fa-angle-right"></i>
-      </button>
+      </button> */}
     </div>
   );
 }
